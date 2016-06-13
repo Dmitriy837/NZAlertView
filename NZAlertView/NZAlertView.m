@@ -113,6 +113,18 @@ static BOOL IsPresenting;
     return self;
 }
 
+- (id)initWithIcon:(UIImage*)icon
+             color:(UIColor*)color
+             title:(NSString *)title
+           message:(NSString *)message
+{
+    self = [self initWithStyle:NZAlertStyleInfo title:title message:message];
+    self.imgIcon.image = icon;
+    self.lbTitle.textColor = color;
+    self.lbMessage.textColor = color;
+    return self;
+}
+
 #pragma mark -
 #pragma mark - Public methods
 
