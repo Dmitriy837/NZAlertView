@@ -59,6 +59,11 @@ typedef void(^NZAlertViewCompletion)(void);
             message:(NSString *)message
            delegate:(id)delegate;
 
+- (id)initWithIcon:(UIImage*)icon
+             color:(UIColor*)color
+             title:(NSString *)title
+           message:(NSString *)message;
+
 - (void)hide;
 
 - (void)show;
